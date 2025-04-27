@@ -26,8 +26,6 @@ export default {
 			}
 			case 'POST': {
 				const body = await request.formData()
-				//const { title, image, description, publisher, language } = body
-
 				const { datatambah, error } = await supabase.from('buku').insert([
 					{ 
 						judul: body.get('title'), 
